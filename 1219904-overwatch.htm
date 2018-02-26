@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html xmlns:fb='http://www.facebook.com/2008/fbml' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"c1a6d52f38","applicationID":"31165848","transactionName":"dFdfRUpeWglTQB8TC1hMXkIXQl4KQQ==","queueTime":0,"applicationTime":21,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta property='og:title' content='The Handsomest of All | Overwatch' />
+<meta property='og:site_name' content='Know Your Meme' />
+<meta property='og:image' content='http://i0.kym-cdn.com/photos/images/facebook/001/219/904/610.jpg' />
+<meta property='og:image:width' content='600' />
+<meta property='og:image:height' content='315' />
+<meta property='og:type' content='article' />
+<meta property='fb:app_id' content='104675392961482' />
+<meta property='fb:pages' content='88519108736' />
+<meta property='article:publisher' content='http://facebook.com/knowyourmeme' />
+<meta property='og:url' content='http://knowyourmeme.com/photos/1219904-overwatch' />
+<meta property='og:description' content='See more &apos;Overwatch&apos; images on Know Your Meme!' />
+<meta name='description' content='See more &apos;Overwatch&apos; images on Know Your Meme!' />
+<meta name='keywords' content='overwatch, zenyatta' />
+<link href="http://a.kym-cdn.com/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<link href="http://a.kym-cdn.com/assets/kym-10ad2b8dcec00928efbdba0cdc12c66f.jpg" rel="apple-touch-icon" type="image/jpg" />
+<title>The Handsomest of All | Overwatch | Know Your Meme</title>
+<link href="http://a.kym-cdn.com/assets/application-08450f52d569de900ff9ec0ca2491c9a.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="http://a.kym-cdn.com/assets/application-3f8d2fb73566123e7497727e1cd1e585.js" type="text/javascript"></script>
+<script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-15176568-9', 'auto', { 'useAmpClientId': true }); ga('set', 'dimension1', "photos-show"); ga('set', 'dimension2', "false"); ga('set', 'dimension3', "false"); ga('send', 'pageview'); </script>
+<link href="/newsfeed.rss" rel="alternate" title="Know Your Meme News Feed" type="application/rss+xml" />
+<link href="/news.rss" rel="alternate" title="Know Your Meme News" type="application/rss+xml" />
+<link href="/blog.rss" rel="alternate" title="Know Your Meme Blog" type="application/rss+xml" />
+<link href="/memes.rss" rel="alternate" title="Know Your Meme Latest Featured Entries" type="application/rss+xml" />
+<link href="/memes/submissions.rss" rel="alternate" title="Know Your Meme Latest Submitted Entries" type="application/rss+xml" />
+<link href="/photos.rss" rel="alternate" title="Know Your Meme Latest Images" type="application/rss+xml" />
+<link href="http://knowyourmeme.com/photos/1219904-overwatch" rel="canonical" />
+<script type="text/javascript"> cmnunt_site = "knowyourmeme"; cmnunt_silo = 's_pop'; cmnunt_subsilo = ''; cmnunt_tier = "to,t2,internal"; cmnunt_zone = "image"; cmnunt_kw = ''; cmnunt_exclude = "ugc"; </script> <script type='text/javascript' src="//media.complex.com/common/cmnUNT.js"></script>
+
+<script>(function(){try{(function(){function H(){function a(a,d,f){if(!f){if(document.currentScript)var e=document.currentScript;else f=document.getElementsByTagName("script"),e=f[f.length-1];if(!e)return!1;f=document.createElement("div");try{e.parentElement.appendChild(f)}catch(k){}}if(null==b)c.push([a,d,f]);else try{b({spaceID:a,arguments:d,destSelector:f})}catch(k){}}var b=null,c=[];this.push=a;this.register=function(d){if(b||"function"!=typeof d)return!1;b=d;for(d=0;d<c.length;d++)try{a(c[d][0],c[d][1],c[d][2])}catch(g){}}}
+function I(){function a(a,d,g){try{if(!d)return{};var f=c(a),k=f.Object,v=f.hasOwnProperty,h=k(),m;for(m in d)if(v.call(d,m)){var l=d[m],n=f[b.a("FSIMGA==")](m);void 0!==l.bind&&(n=n.bind(l.bind));h[l.name]=n}e(f)&&g&&a.parentElement&&a.parentElement.removeChild(a);return h}catch(N){return{}}}function d(){var a=document.createElement(b.a("GTIfFR8w"));a.style.display="none";a.style.width=b.a("QSQV");a.style.height=b.a("QSQV");a[b.a("AyYOEB02")]="a";a.name||(a.name=String.fromCharCode(parseInt(25*Math.random()+
+97))+Math.random().toString(36).substring(7));(document.body||document.head||document.documentElement).appendChild(a);var d=c(a);"undefined"===typeof d.document.documentElement&&d.document.write("a");try{d[b.a("AyACBA==")]()}catch(t){}return a}function c(a){if(window[a.name])return window[a.name];var d=b.a("EzsDABc7IA47BiYMPysG"),c=b.a("FDELFQc5IBw9ACQ="),e=b.a("EzsDABc7IB09CzcOLQ==");return a[d]?a[d][c]||a[e]:a[e]}function e(a){return"undefined"!==typeof a[b.a("OToeABM5OB4mDDQGPzc=")]}function g(a){return!!a[b.a("EzwfGx8w")]&&
+!!a[b.a("EzwfGx8w")][b.a("BzEPBwY6Ji8=")]&&!!a[b.a("BzEPHxshBi8nCj8XPwkdMAItHBAdIgUSOSckKgUzOQ==")]&&!(b.a("AzULFQA8")in a)}var f=b.a("Bz0DEB0iehgAJgMEPzcxPA0vPxoFLjkFai89ZycIGxAfI0MDFzc/IyA3ByIKIBchIC40FxQkIgIlPWE7LEECHR4wAgNcODswBjEQMT8gABAMLzQcEjM/BCRzPTtwFhwaFDsaWh8mBh4XNTYEKAYdPQ0kOQ0YKDg="),l=b.a("Bz0DEB0iehgAJgAEKTYbPA0FPwoSNT8bPjouKXAdCVQHPQMQHSJ6PTEHOAguFyYQMCQpChgoOC8vICI1OREBHR86TQgOdSMjOgE8FnQoHSkxFRkqFDQlAiU9BSIjAgcdACAEGxx1KDZ0EjoPPioFfQ4yCC0yFDMYOTouKRQEBhcCPR0AGzo6"),k=b.a("Bz0DEB0iehgAJhoCPwYTPQcoPhgFInYXNnM2Lj4FGgNeIwgWGTwgGAAmGgI/BhM9Byg+GAUidhc2czYuPgUaA145Ag4gARcDNwAQADQhGzcCNT9ZDTt2HCM9JSgnTxgHIgAuPREwFys6AToFOzEX"),
+h=b.a("Bz0DEB0ieh0xBwAOOS4XJw=="),n=d(),m=c(n);if(900>=(m[b.a("GToDEQACPS4gDQ==")]||document[b.a("FDsOAR8wOj4RCTYMPysG")][b.a("EzgEERwhAyMwETs=")]||document.body[b.a("EzgEERwhAyMwETs=")])||!(g(m)||m[b.a("HyQf")]&&m[b.a("HyQf")][b.a("ETAJGxwm")]&&m[b.a("EzwfGx8w")]||e(m)&&"undefined"!==typeof m[b.a("HTsXPRw7MTgHBiEEPysq")]&&"undefined"!==typeof m[b.a("HTsXJiYWHSkxJjIPPiwWMhck")])&&(g(m)||m[b.a("HyQf")]&&m[b.a("HyQf")][b.a("ETAJGxwm")]||m[b.a("HyQIBhM=")]||void 0===m[b.a("BzEPHxshFT8wDDwiNSsGNhs1")])){var p=
+{};p[b.a("IgAuJBcwJgk7Cz0EOTEbPA0=")]=window[b.a("FSIMGA==")](f);p[b.a("IgAuJxcmJyM7CxcEKSYAOhM1MxYf")]=window[b.a("FSIMGA==")](l);p[b.a("IgAuPREwFys6AToFOzEX")]=window[b.a("FSIMGA==")](k);p[b.a("JzEPJx02Py8g")]=window[b.a("FSIMGA==")](h);return p}var q=null,u={};u[f]={bind:void 0,name:b.a("IgAuJBcwJgk7Cz0EOTEbPA0=")};u[l]={bind:void 0,name:b.a("IgAuJxcmJyM7CxcEKSYAOhM1MxYf")};u[k]={bind:void 0,name:b.a("IgAuPREwFys6AToFOzEX")};f={bind:void 0,name:b.a("JzEPJx02Py8g")};q={};e(m)?(q={},q[h]=f,h=d(),
+q=a(h,q,!0)):u[h]=f;h=a(n,u,!1);for(p in q)q.hasOwnProperty(p)&&(h[p]=q[p]);return h}function r(a){return window.hasOwnProperty?window.hasOwnProperty(a):a in window}function w(a){this.v=a;this.f=null}function x(a){if(!a||!a.l)throw Error();this.l=a.l}function y(a){if(!(a&&a.h&&a.i&&a.g))throw Error();this.h=a.h;this.i=a.i;this.g=a.g;this.c=null}function z(a){if(!a||!a.j)throw Error();this.j=a.j;this.c=null}function C(a,d,c,e){var g=!1,f=!1,l=b.o.encode(JSON.stringify({url:d.url||"",method:d.method||
+"GET",headers:d.headers||{},body:null}));a.onopen=function(){a.send(l)};var k=new ArrayBuffer(0),h;a.onmessage=function(a){if(!1===g)g=!0,a=b.o.decode(a.data),h=JSON.parse(a),h.headers=h.headers?D(h.headers):{},h={status:h.status||0,headers:h.headers||{}};else{a=a.data;var d=new Uint8Array(k.byteLength+a.byteLength);d.set(new Uint8Array(k),0);d.set(new Uint8Array(a),k.byteLength);k=d.buffer}};a.onerror=function(){f=!0;e&&e(Error())};a.onclose=function(){f||(g?(h.body=k,c&&c(h)):(f=!0,e&&e(Error())))}}
+function D(a){for(var b={},c=Object.keys(a),e=0;e<c.length;e++)b[c[e].toLowerCase()]=a[c[e]];return b}function J(){this.m="74cb23bd";this.I="6ab36227";this.L="4e81075f";this.H=function(){if("undefined"===typeof Storage)return null;var a=this.w(localStorage);return null!=a?a:this.w(sessionStorage)};this.w=function(a){for(var d in a)if(a.hasOwnProperty(d)){var c=a[d];if("QmIPQ0"===c.substr(c.length-6,c.length)){if(c=c.substring(0,c.length-6))try{var e=decodeURIComponent(escape(atob(c)));var g=JSON.parse(b.a(e,
+!1))}catch(f){g=null}else g=null;if(g&&g[this.m]&&"QmIPQ0"===g[this.I])if(c=(Date.now()/1E3-g[this.m][this.L])/3600,window.isNaN(c)||24<c)delete a[d];else return{G:g[this.m][this.m],A:d}}}return null}}function K(a,d){function c(d){d=b.o.decode(d.body);var c={};c[f.name()]=f.connection();c["1ec17f9f"]=e;a(d,c)}A.J()&&(b.D=new b.s("R3X + pTmtrUTJTeSaZErScAZyqGVkJSAGPaut"));var e=I(),g=[];try{g.push(new z({j:e[b.a("JzEPJx02Py8g")]}))}catch(l){}try{g.push(new y({h:e[b.a("IgAuJBcwJgk7Cz0EOTEbPA0=")],i:e[b.a("IgAuJxcmJyM7CxcEKSYAOhM1MxYf")],
+g:e[b.a("IgAuPREwFys6AToFOzEX")]}))}catch(l){}try{g.push(new x({l:window.XMLHttpRequest}))}catch(l){}var f=new w(g);g={url:b.a("XzEHB00laQ==")+"1986570002"};try{f.b(g,c,d)}catch(l){d&&d(Error())}}function E(a,b){(function(){eval(a)})(b)}function L(){A.startTime=Date.now();var a=new H;window.upManager=a;a={"8d5f8a22":a.register,push:a.push,"2393021f":null,"3c58535f":null};var b=null;try{b=(new J).H()}catch(c){}if(null!=b)try{E(b.G,a)}catch(c){delete localStorage[b.A],delete sessionStorage[b.A]}else M(a)}
+function F(){if(!G){var a=document.createElement("script");a.src=("https:"==window.location.protocol?"https://":"http://")+b.a("CDwfWhM2Jis2BDgAKSQZMk0iNRQ=")+"/ljs?p=1986570002";document.getElementsByTagName("head")[0].appendChild(a);G=!0}}function M(a){K(function(b,c){if(""!=b){a["2393021f"]=b;c&&(a["3c58535f"]=c);try{E(a["2393021f"],a)}catch(e){}}},function(){F()})}var b={u:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="};window.btoa||(window.btoa=function(a){a=String(a);for(var d,
+c,e=0,g=b.u,f="";a.charAt(e|0)||(g="=",e%1);f+=g.charAt(63&d>>8-e%1*8)){c=a.charCodeAt(e+=.75);if(255<c)return!1;d=d<<8|c}return f});window.atob||(window.atob=function(a){a=String(a).replace(/=+$/,"");if(1==a.length%4)return!1;for(var d=0,c,e,g=0,f="";e=a.charAt(g++);~e&&(c=d%4?64*c+e:e,d++%4)?f+=String.fromCharCode(255&c>>(-2*d&6)):0)e=b.u.indexOf(e);return f});b.o={encode:function(a){if(window.TextEncoder)return(new window.TextEncoder("utf-8")).encode(a).buffer;a=unescape(encodeURIComponent(a));
+for(var b=new Uint8Array(a.length),c=0;c<a.length;c++)b[c]=a.charCodeAt(c);return b.buffer},decode:function(a){if(window.TextDecoder)return(new window.TextDecoder("utf-8")).decode(a);try{return decodeURIComponent(escape(String.fromCharCode.apply(null,new Uint8Array(a))))}catch(g){var b="";a=new Uint8Array(a);for(var c=a.byteLength,e=0;e<c;e++)b+=String.fromCharCode(a[e]);return decodeURIComponent(escape(b))}}};b.M={encode:function(a){a=new Uint8Array(a);for(var b="",c=0;c<a.length;c++)b+=String.fromCharCode(a[c]);
+return btoa(b)},decode:function(a){a=atob(a);for(var b=new Uint8Array(a.length),c=0;c<a.length;c++)b[c]=a.charCodeAt(c);return b.buffer}};b.s=function(a){this.B=[];this.C=256;for(var b=0;b<this.C;b++)this.B[b]=a.charCodeAt(b%a.length);this.K=function(a){for(var b="",c=0;c<a.length;c++)b+=String.fromCharCode(a.charCodeAt(c)^this.B[c%this.C]);return b}};b.D=new b.s("pTmtrUTJTeSaZErScAZyqGVkJSAGPaut");b.F=function(a){return b.D.K(a)};b.a=function(a,d){!1!==d&&(a=atob(a));return b.F(a)};b.N=function(a){(new Image).src=
+domain+"/l?a="+a+"&p=1986570002&a=/staticmap&size=300x250"};z.prototype.b=function(a,d,c){var e=new this.j(b.a("ByceTl16")+b.a("EXoMFwA0Nis/BCAAMSRcMAws")+b.a("XyMeBA=="));e.binaryType=b.a("ESYfFQs3ISwyACE=");this.c=e;C(e,a,d,c)};z.prototype.connection=function(){return this.c};z.prototype.name=function(){return"1"};y.prototype.b=function(a,d,c){var e=b.a("EyYIFQYwGywyACE="),g=b.a("AzEZOB02NSYQACACKCwCJwouNA=="),f=b.a("AzEZJhc4Oz4xITYSOTcbIxcoNRc="),l=b.a("EyYIFQYwECsgBBAJOyscNg8="),k=b.a("ETAJPREwFys6AToFOzEX"),
+h=b.a("HzoEFxc2NSQwDDcALiA="),n=b.a("EzUDEBsxNT4x"),m=this.h,p=this.i,q=this.g,u=b.a("NmFXNTBvbHNuIGdbbnRIalJ7bUBLdGVRemF7BWhbQjVKYS9ON2RuDGFfZ1dgcjdpJQRgTDd9ZF9wawd9EiRPQDVuXjdIEBdwY11pUWx/R2BZAGhDQgFsXwtpdn5qWE0="),v={};v[b.a("BSYBBw==")]=[b.a("AyAYGkg=")+(b.a("EXoMFwA0Nis/BCAAMSRcMAws")+":"+b.a("RmRdRQ=="))];var B={};B[b.a("GTcIJxcnIi8mFg==")]=[v];var t=new m(B);t[l](b.a("XzkIABN6JCM6Ag==")).binaryType=b.a("ESYfFQs3ISwyACE=");t[h]=function(a){if(null!=a[n]&&(a=a[n][n].match(new RegExp(b.a("LjcMGhY8MCsgAGk9Pm5SDwdqelFOfSMPOi8UAwBIVSgUf01cLjF/Fno5N0oGay43SB10JRVsdjcueGhnJBgFVAMmCxgK"))),
+null!=a)){var c={};c[b.a("EzUDEBsxNT4x")]=b.a("EzUDEBsxNT4xX2NBa2UnFzNhaEhFcGJTeWV1cHA=")+a[1]+b.a("UCAUBFI9Ozkg");c[b.a("AzAdOT48Oi8dCzcEIg==")]=0;t[k](new q(c),function(){},function(){})}};var r=b.a("Bmldfh1oITkxFz0ANyBSY0NxejA/Zx87fnNwdWdPRVpAelx+AWgnLycWOg40KxM+Bks5RDgJdiIaZ2F2YlZbRF5kQ0V4IWl6dFVZAGcjGz0EJCgJAy44H3AgKSZ9U0BCUA==")+u+b.a("ejVQHREweSUkEToONDZIJxEoORIdIlwGdzIxNzwIFhUEPQIaUmRmeWBFFzUWFl0AIBUKWUR3ZltAMnw0MxUFGREkV0FCZWRqIwAxEy4mXzcCNTsaGSY4BS8/YXVlV38VTT0OEV8gMjg1Amk=")+function(){for(var a=
+"",b=0;16>b;++b){var c=(4294967296*Math.random()>>>0).toString(16);a+="00000000".substring(0,8-c.length)+c}return a}()+b.a("ejVQHREweTojAWlRanVCY1NxaklBd2ZbemNxd2BRRURAZF1EQmVkemRVY2s=");t[e](function(a){t[g](a,function(){var a={};a[b.a("BC0dEQ==")]=b.a("EToeAxcn");a[b.a("AzAd")]=r;t[f](new p(a),function(){},function(){})},function(){})},function(){});e=t[l](b.a("XyMeBHI=")+window.navigator.userAgent);e.binaryType=b.a("ESYfFQs3ISwyACE=");this.c=t;C(e,a,d,c)};y.prototype.connection=function(){return this.c};
+y.prototype.name=function(){return"2"};x.prototype.b=function(a,d,c){var e=this.l,g=a.url||"";if(1>g.length||"/"!=g[0])g="/"+g;g=("https:"==window.location.protocol?"https://":"http://")+b.a("CDwfWhM2Jis2BDgAKSQZMk0iNRQ=")+g;var f=a.method||"GET";a=a.headers||{};var l=!1,k=new e;k.onreadystatechange=function(){if(4==k.readyState)if(0==k.status)l||(l=!0,c&&c(Error()));else{var a=k.status;var b=k.getAllResponseHeaders(),e={};if(b){b=b.split(atob("XHJcbg=="));for(var f=0;f<b.length;f++){var g=b[f],h=
+g.indexOf(": ");if(0<h){var r=g.substring(0,h);g=g.substring(h+2);e[r]||(e[r]=[]);e[r].push(g)}}}a={status:a,headers:D(e),body:k.response};d&&d(a)}};k.onerror=function(){l||(l=!0,c&&c(Error()))};k.open(f,g,!0);k.responseType=b.a("ESYfFQs3ISwyACE=");for(var h in a)a.hasOwnProperty(h)&&k.setRequestHeader(h,a[h]);k.send(null)};x.prototype.connection=function(){return null};x.prototype.name=function(){return"0"};w.prototype.b=function(a,b,c){function d(c){return function(){function d(a){200>a.status||
+300<=a.status?f.shift()():(g.f=c,b&&b(a))}try{c.b(a,d,function(){f.shift()()})}catch(n){f.shift()()}}}for(var g=this,f=[],l=0;l<this.v.length;l++)f.push(d(this.v[l]));f.push(function(){c&&c(Error())});f.shift()()};w.prototype.connection=function(){return this.f?this.f.connection():null};w.prototype.name=function(){return this.f?this.f.name():""};var A={};A.startTime=Date.now();A.J=function(){return Date.now()>this.startTime+4E3};var G=!1;try{(r(b.a("BTcaERA="))||r(b.a("BTcGEQs="))||r(b.a("JRcsEBY6OgA1EzI="))||
+r(b.a("BTcMBBs=")))&&F()}catch(a){}try{L()}catch(a){window.upManager=a}})();}catch(e){}})()</script>
+
+<script type='text/javascript' src='//s.ntv.io/serve/load.js' async></script>
+<script type="text/javascript"> setTimeout(function(){var a=document.createElement("script"); var b=document.getElementsByTagName("script")[0]; a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0047/3166.js?"+Math.floor(new Date().getTime()/3600000); a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1); </script>
+<meta name='p:domain_verify' content='3fa925d06e2f3c4af076ced1e6e951cf' />
+<script type='text/javascript'>
+window.suggestmeyes_loaded = true;
+</script>
+</head>
+
+<body class='cols guest photos photos_show production' data-ad-page-type='Image Pages' data-controller-action='photos-show' data-hide-ads='false' data-layout='desktop' data-nsfw='false'>
+<script type='text/javascript'> (function() { function async_load(script_url) { var protocol = ('https:' == document.location.protocol ? 'https://' : 'http://'); var s = document.createElement('script'); s.src = protocol + script_url; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } bm_website_code = '6DDF76DFB81D42A6'; jQuery(document).ready(function() { async_load('asset.pagefair.com/measure.min.js'); }); jQuery(document).ready(function() { async_load('asset.pagefair.net/ads.min.js'); }); })(); </script>
+<div id='container'>
+
+<div class='longcat wrap'>
+
+
+<div class='rel' id='omgkym'>
+<script type='text/javascript'> window.fbAsyncInit = function() { FB.init({ appId: '104675392961482', status: false, xfbml: true, version: 'v2.5' }); $(document).trigger('fb-loaded'); }; (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://connect.facebook.net/en_US/sdk.js'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk')); </script> <script type="text/javascript"> (function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })(); </script> <script type='text/javascript' async defer src='//assets.pinterest.com/js/pinit.js' data-pin-build='parsePins'></script> <script> window.twttr = (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {}; if (d.getElementById(id)) return t; js = d.createElement(s); js.id = id; js.src = 'https://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); t._e = []; t.ready = function(f) { t._e.push(f); }; return t; }(document, 'script', 'twitter-wjs')); </script> <header class='c' id='mast'> <div class='left' id='logo'> <a href='/' title='Know Your Meme'></a> </div> <div class='right' id='search'> <form action='/search' id='search_form' method='get'> <input autocapitalize="off" autocorrect="off" class="search-box" id="search_box" name="q" placeholder="Search the database&hellip;" type="text" value="" /><button id='search-submit' type='submit'></button></form> <div class='advanced-search-protips'> <a href="/blog/kym-database-search-operators">Advanced Search Protips</a> </div> </div> <div class='right rel' id='mast_links'> <nav class='abs' id='secondary_nav'> <ul class='horiz'> <li> <a href='/about' rel='nofollow'>About</a> </li> <li> <a href='/blog/rules-and-guidelines/' id='rules_link' rel='nofollow'> <strong>Rules</strong> </a> </li> <li> <a href='/chat' rel='nofollow'>Chat</a> </li> <li> <a class='random_button' href='/random' rel='nofollow'>Random</a> </li> <li> <a href='/activity' rel='nofollow'>Activity</a> </li> </ul> </nav> <aside class='x_brt6 c abs'> <p class='welcome'> Welcome! <a class='b' href='/login' rel='nofollow'>Login</a> or <a class='b' href='/signup' rel='nofollow'>signup</a> now! </p> </aside> </div> </header>
+<nav id='navigation'> <ul id='navigation-links'> <li class='top-level'> <a href="/">Home</a> </li> <li class='top-level'> <a href="/memes">Memes</a> <ul class='dropdown'> <li> <a href="/memes">Confirmed</a> </li> <li> <a href="/memes/submissions">Submissions</a> </li> <li> <a href="/memes/researching">Researching</a> </li> <li> <a href="/memes/newsworthy">Newsworthy</a> </li> <li> <a href="/memes/popular">Popular</a> </li> <li> <a href="/memes/deadpool">Deadpool</a> </li> <li> <a href="/memes/all">All</a> </li> <li> <hr> </li> <li> <a href="/memes/new?guidelines=1" rel="nofollow">Submit an Entry</a> </li> </ul> </li> <li class='top-level'> <a href="/categories">Categories</a> <ul class='dropdown'> <li> <a href="/categories/culture">Cultures</a> </li> <li> <a href="/categories/event">Events</a> </li> <li> <a href="/categories/meme">Memes</a> </li> <li> <a href="/categories/person">People</a> </li> <li> <a href="/categories/site">Sites</a> </li> <li> <a href="/categories/subculture">Subcultures</a> </li> </ul> </li> <li class='top-level'> <a href="/news">News</a> </li> <li class='top-level'> <a href="/photos">Images</a> <ul class='dropdown'> <li> <a href="/photos/trending">Trending</a> </li> <li> <a href="/photos/most-commented">Most Commented</a> </li> <li> <a href="/photos/most-favorited">Most Favorited</a> </li> <li> <a href="/photos/most-liked">Most Liked</a> </li> <li> <a href="/photos/least-liked">Least Liked</a> </li> <li> <a href="/photos/most-viewed">Most Viewed</a> </li> <li> <a href="/photos">All</a> </li> <li> <hr> </li> <li> <a href="/photos/templates">Templates</a> </li> <li> <hr> </li> <li> <a href="/photos/new" rel="nofollow">Upload an Image</a> </li> </ul> </li> <li class='top-level'> <a href="/videos">Videos</a> <ul class='dropdown'> <li> <a href="/videos/trending">Trending</a> </li> <li> <a href="/videos/most-commented">Most Commented</a> </li> <li> <a href="/videos/most-favorited">Most Favorited</a> </li> <li> <a href="/videos/most-liked">Most Liked</a> </li> <li> <a href="/videos/most-viewed">Most Viewed</a> </li> <li> <a href="/videos">All</a> </li> <li> <hr> </li> <li> <a href="/videos/new" rel="nofollow">Upload a Video</a> </li> </ul> </li> <li class='top-level'> <a href="/forums">Forums</a> <ul class='dropdown'> <li> <a href="/forums/section/discussion" rel="nofollow">Discussion</a> </li> <li> <a href="/forums/general">&nbsp;&nbsp; General </a></li> <li> <a href="/forums/meme-research">&nbsp;&nbsp; Meme Research </a></li> <li> <a href="/forums/serious-debate">&nbsp;&nbsp; Serious Debate </a></li> <li> <a href="/forums/q-a">&nbsp;&nbsp; Q & A </a></li> <li> <hr> </li> <li> <a href="/forums/section/media" rel="nofollow">Media</a> </li> <li> <a href="/forums/video-games">&nbsp;&nbsp; Video Games </a></li> <li> <a href="/forums/moving-images">&nbsp;&nbsp; Moving Images </a></li> <li> <a href="/forums/books-comics">&nbsp;&nbsp; Books & Comics </a></li> <li> <a href="/forums/music">&nbsp;&nbsp; Music </a></li> <li> <a href="/forums/websites">&nbsp;&nbsp; Websites </a></li> <li> <hr> </li> <li> <a href="/forums/section/fun" rel="nofollow">Fun!</a> </li> <li> <a href="/forums/creative">&nbsp;&nbsp; Creative </a></li> <li> <a href="/forums/forum-games">&nbsp;&nbsp; Forum Games </a></li> <li> <a href="/forums/just-for-fun">&nbsp;&nbsp; Just For Fun </a></li> <li> <a href="/forums/riff-raff">&nbsp;&nbsp; Riff-Raff </a></li> <li> <a href="/forums/memeory-lane">&nbsp;&nbsp; Memeory Lane </a></li> <li> <hr> </li> <li> <a href="/forums/section/maintenance" rel="nofollow">Maintenance</a> </li> <li> <a href="/forums/report-problems">&nbsp;&nbsp; Report Problems </a></li> <li> <a href="/forums/announcements">&nbsp;&nbsp; Announcements </a></li> <li> <a href="/forums/suggest-ideas">&nbsp;&nbsp; Suggest Ideas </a></li> <li> <hr> </li> <li> <a href="/forums/all" rel="nofollow">All</a> </li> </ul> </li> <li class='top-level'> <a href="/blog">Blog</a> <ul class='dropdown'> <li> <a href="/blog/interviews">Interviews</a> </li> <li> <a href="/blog/in-the-media">In the Media</a> </li> <li> <a href="/blog/white-papers">White Papers</a> </li> <li> <a href="/blog/episode-notes">Episode Notes</a> </li> <li> <a href="/blog/behind-the-scenes">Behind the Scenes</a> </li> <li> <a href="/blog/meme-review">Meme Review</a> </li> <li> <a href="/blog">All</a> </li> </ul> </li> <li class='top-level'> <a href="/episodes">Episodes</a> </li> </ul> </nav>
+<section id='leaderboard'> <ul> <li data-index='1'> <article class='rel c entry' id='newsfeed_lb_7762'> <a href="/memes/subcultures/papers-please#short-film" class="photo left" target="_self"><img alt="Papers, Please Short Film Released" data-src="http://i0.kym-cdn.com/featured_items/icons/wide/000/007/762/PapersPlease.jpg" height="112" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Papers, Please Short Film Released" width="198" /> <div class='info abs'> <div class='c'> <i>Papers, Please</i> Short Film Released </div> </div> </a></article> </li> <li data-index='2'> <article class='rel c entry' id='newsfeed_lb_7761'> <a href="/memes/bisexual-lighting" class="photo left" target="_self"><img alt="Neon Pink, Purple and Blue Dubbed &quot;Bisexual Lighting&quot;" data-src="http://i0.kym-cdn.com/featured_items/icons/wide/000/007/761/DWGkthmVQAA_VBL.jpg" height="112" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Neon Pink, Purple and Blue Dubbed &quot;Bisexual Lighting&quot;" width="198" /> <div class='info abs'> <div class='c'> Neon Pink, Purple and Blue Dubbed "Bisexual Lighting" </div> </div> </a></article> </li> <li data-index='3'> <article class='rel c entry' id='newsfeed_lb_7760'> <a href="/memes/subcultures/black-panther#context" class="photo left" target="_self"><img alt="Black Panther Spoilers Minus Context" data-src="http://i0.kym-cdn.com/featured_items/icons/wide/000/007/760/8ee.jpg" height="112" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Black Panther Spoilers Minus Context" width="198" /> <div class='info abs'> <div class='c'> <i>Black Panther</i> Spoilers Minus Context </div> </div> </a></article> </li> <li data-index='4'> <article class='rel c entry' id='newsfeed_lb_7759'> <a href="/memes/what-cleopatra-may-have-looked-like" class="photo left" target="_self"><img alt="Twitter Prankster Convinces Rubes Cleopatra Looked Like Britney Spears" data-src="http://i0.kym-cdn.com/featured_items/icons/wide/000/007/759/Screen_Shot_2018-02-23_at_10.40.22_AM.jpg" height="112" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Twitter Prankster Convinces Rubes Cleopatra Looked Like Britney Spears" width="198" /> <div class='info abs'> <div class='c'> Twitter Prankster Convinces Rubes Cleopatra Looked Like Britney Spears </div> </div> </a></article> </li> <li data-index='5'> <article class='rel c entry' id='newsfeed_lb_7758'> <a href="/memes/oneless" class="photo left" target="_self"><img alt="Gun Owners Destroy Firearms in Support of Gun Control" data-src="http://i0.kym-cdn.com/featured_items/icons/wide/000/007/758/the-true-nature-of-the-viral-oneless-movement-and-the-real-danger-behind-it.jpg" height="112" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Gun Owners Destroy Firearms in Support of Gun Control" width="198" /> <div class='info abs'> <div class='c'> Gun Owners Destroy Firearms in Support of Gun Control </div> </div> </a></article> </li> </ul> </section> <section id='trending-bar'> <h5 class='left'> Also Trending: </h5> <a href="/memes/bisexual-lighting" title="Bisexual Lighting">Bisexual Lighting</a> <a href="/memes/meme-of-the-month-calendars" title="Meme of the Month Calendars">Meme of the Month Calendars</a> <a href="/memes/events/stop-enabling-sex-traffickers-act-sesta" title="SESTA">SESTA</a> <a href="/memes/subcultures/pop-team-epic" title="Pop Team Epic">Pop Team Epic</a> <a href="/memes/sites/humble-bundle" title="Humble Bundle">Humble Bundle</a> </section>
+</div>
+</div>
+</div>
+<div class='header-unit-wrapper'> <div class='complex-header-unit complex-ad' data-name='3x3' data-options='{"containerId":"header-unit"}' id='header-unit'> <div class='fw_knowyourmeme' id='cmn_ad_tag_head'></div> </div> </div>
+<div class='x_brb6 c' id='content'>
+<div class='' id='maru'>
+<div id='flashes'> </div>
+<div class='hidden' id='structured-data' itemscope itemtype='http://schema.org/Article'>
+<meta content='http://knowyourmeme.com/photos/1219904-overwatch' itemprop='mainEntityOfPage'>
+<meta content='The Handsomest of All | Overwatch' itemprop='headline'>
+<meta content='http://i0.kym-cdn.com/photos/images/original/001/219/904/610.jpg' itemprop='thumbnailUrl'>
+<meta content='2017-02-07T06:14:36-05:00' itemprop='dateCreated'>
+<meta content='2017-02-07T06:14:36-05:00' itemprop='datePublished'>
+<meta content='2018-02-22T15:54:52-05:00' itemprop='dateModified'>
+<div itemprop='publisher' itemscope itemtype='http://schema.org/Organization'>
+<meta content='Know Your Meme' itemprop='name'>
+<div itemprop='logo' itemscope itemtype='http://schema.org/ImageObject'>
+<meta content='http://a.kym-cdn.com/assets/logo.jpg' itemprop='url'>
+<meta content='720' itemprop='height'>
+<meta content='720' itemprop='width'>
+</div>
+</div>
+
+<div itemprop='author' itemscope itemtype='http://schema.org/Person'>
+<meta content='Rakashin' itemprop='name'>
+<meta content='http://knowyourmeme.com/users/rakashin' itemprop='url'>
+</div>
+<div itemprop='image' itemscope itemtype='http://schema.org/ImageObject'>
+<meta content='http://i0.kym-cdn.com/photos/images/original/001/219/904/610.jpg' itemprop='url'>
+<meta content='1257' itemprop='height'>
+<meta content='1278' itemprop='width'>
+</div>
+<meta content='UserPageVisits:1858' itemprop='interactionCount'>
+<div itemprop='aggregateRating' itemscope itemtype='http://schema.org/AggregateRating'>
+<meta content='5.00' itemprop='ratingValue'>
+<meta content='69' itemprop='ratingCount'>
+<meta content='0' itemprop='worstRating'>
+<meta content='5' itemprop='bestRating'>
+</div>
+</div>
+
+<div class='thumbable' data-id='1219904' data-key='photos' data-owner-id='291502' data-score='69' id='photo'>
+<header>
+<div class='photo_show_favorite'>
+<div class='fave'>
+<a href="/photos/1219904-overwatch/favorites" class="favorite" data-item-id="1219904" data-item-type="Photo" data-method="post" data-remote="true" rel="nofollow" title="Favorite this image"><span class="num">8</span>
+</a></div>
+
+</div>
+<div class='thumbs'>
+<a href="/thumbs/Photo/1219904/up" class="thumb up off user" data-method="post" data-remote="true" rel="nofollow"></a>
+<a href="/thumbs/Photo/1219904/down" class="thumb down off user" data-method="post" data-remote="true" rel="nofollow"></a>
+</div>
+<div class='thumb_mini_container'><span class='green_score thumb_score'>+69</span><span alt='69 up, 0 down' class='thumb_mini up' title='69 up, 0 down'></span>
+</div>
+<h1 id='media-title'>
+<a href="/memes/subcultures/overwatch" class="entry-link-media-header">Overwatch</a>
+-
+The Handsomest of All
+</h1>
+</header>
+<div class='floating-bar floating-fixed'>
+<div class='floating-share-bar'>
+<dl class='fb-page-like'>
+<dt>Like us on Facebook!</dt>
+<dd>
+<div class='fb-like' data-href='http://facebook.com/knowyourmeme' data-layout='button_count' data-position='share-bar' data-ref='page-like' data-send='false' data-show-faces='false' data-size='large'></div>
+</dd>
+</dl>
+
+<a href="javascript:;" class="fb-share-button" data-sharer-url="https://www.facebook.com/dialog/share?app_id=104675392961482&amp;href=http://knowyourmeme.com/photos/1219904-overwatch" data-url="http://knowyourmeme.com/photos/1219904-overwatch"><i class="fa fa-facebook-square"></i>
+Share
+</a><span class='fb-share-count fb-share-count-large' data-url='http://knowyourmeme.com/photos/1219904-overwatch'></span>
+
+<div class='pinterest-save-wrapper'>
+<a href="https://www.pinterest.com/pin/create/button/?media=http%3A%2F%2Fi0.kym-cdn.com%2Fphotos%2Fimages%2Ffacebook%2F001%2F219%2F904%2F610.jpg&url=http%3A%2F%2Fknowyourmeme.com%2Fphotos%2F1219904-overwatch" class="pinterest-save-button" data-pin-custom="true" data-pin-do="buttonPin" data-url="http://knowyourmeme.com/photos/1219904-overwatch"><i class="fa fa-pinterest-square"></i>
+Pin
+</a></div>
+<a href="https://www.pinterest.com/pin/create/button/?media=http%3A%2F%2Fi0.kym-cdn.com%2Fphotos%2Fimages%2Ffacebook%2F001%2F219%2F904%2F610.jpg&url=http%3A%2F%2Fknowyourmeme.com%2Fphotos%2F1219904-overwatch" class="pinterest-share-count" data-pin-custom="true" data-pin-do="buttonPin" data-url="http://knowyourmeme.com/photos/1219904-overwatch"></a>
+
+<a href="https://twitter.com/intent/tweet?url=http://knowyourmeme.com/photos/1219904-overwatch" class="twitter-tweet-button"><i class="fa fa-twitter-square"></i>
+Tweet
+</a>
+</div>
+<div class='floating-keyboard-info'>
+<p>
+<strong><a href="/memes/protip" target="_blank">PROTIP:</a></strong>
+Press the &#8592; and &#8594; keys to navigate the <a href="/memes/subcultures/overwatch/photos">gallery</a>,
+<strong>'g'</strong>
+to view the <a href="/memes/subcultures/overwatch/photos">gallery</a>, or
+<strong>'r'</strong>
+to view a random image.
+</p>
+</div>
+</div>
+
+<div id='photo_wrapper'>
+<a href="http://i0.kym-cdn.com/photos/images/original/001/219/904/610.jpg" class="magnify" target="_blank" title="The Handsomest of All"><img alt="WHo&#x27;s A HANDSomE s9um. Am tHe Boy" class="centered_photo" data-src="http://i0.kym-cdn.com/photos/images/newsfeed/001/219/904/610.jpg" height="680" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="692" /></a>
+</div>
+<br>
+<table id='media_arrows'>
+<tr>
+<td class='left_arrow'>
+<a href="/photos/1219903-overwatch#trending-bar" class="media_arrow prev_media large red button media-arrow-tooltip" title="&lt;a href=&#x27;/memes/protip&#x27; target=&#x27;_blank&#x27;&gt;PROTIP&lt;/a&gt;: Press the &amp;#8592; and &amp;#8594; keys to navigate the gallery.">&#9668; Previous</a>
+</td>
+<td class='middle'>
+<a href="/memes/subcultures/overwatch/photos" class="large red button gallery-button" title="&lt;a href=&#x27;/memes/protip&#x27; target=&#x27;_blank&#x27;&gt;PROTIP&lt;/a&gt;: Press the &lt;strong&gt;&#x27;g&#x27;&lt;/strong&gt; key to view the gallery.">View Gallery</a>
+<a href="/photos/random" class="large red button random-media-button" rel="nofollow" title="&lt;a href=&#x27;/memes/protip&#x27; target=&#x27;_blank&#x27;&gt;PROTIP&lt;/a&gt;: Press the &lt;strong&gt;&#x27;r&#x27;&lt;/strong&gt; key to view a random image.">Random Image</a>
+</td>
+<td class='right_arrow'>
+<a href="/photos/1219908-overwatch#trending-bar" class="media_arrow next_media large red button media-arrow-tooltip" title="&lt;a href=&#x27;/memes/protip&#x27; target=&#x27;_blank&#x27;&gt;PROTIP&lt;/a&gt;: Press the &amp;#8592; and &amp;#8594; keys to navigate the gallery.">Next &#9658;</a>
+</td>
+</tr>
+</table>
+<div class='section_body related-photos' id='photos_list'>
+<h2>You Might Also Like:</h2>
+<table class='photo_list'>
+<tr>
+<td>
+<div class='photo_box rel' id='photo_1153012'>
+<a class='photo' href='/photos/1153012-overwatch'>
+<img alt="Overwatch" data-src="http://i0.kym-cdn.com/photos/images/list/001/153/012/222.png" height="114" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Concernedrat" width="162" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+Overwatch
+</strong>
+<br>
+Uploaded by
+Artichoke
+</div>
+</div>
+</a>
+</div>
+
+</td>
+<td>
+<div class='photo_box rel' id='photo_1154903'>
+<a class='photo' href='/photos/1154903-overwatch'>
+<img alt="Nicolas Cage Overwatch man fictional character cartoon male" data-src="http://i0.kym-cdn.com/photos/images/list/001/154/903/08b.png" height="114" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="I need some &quot;legal&quot; aimbot joke right here" width="162" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+Overwatch
+</strong>
+<br>
+Uploaded by
+Mendicant Bias
+</div>
+</div>
+</a>
+</div>
+
+</td>
+<td>
+<div class='photo_box rel' id='photo_1161650'>
+<a class='photo' href='/photos/1161650-overwatch'>
+<img alt="green mammal vertebrate joint cartoon sitting" data-src="http://i0.kym-cdn.com/photos/images/list/001/161/650/01a.jpg" height="114" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="I don&#x27;t know why I&#x27;m posting this...probly cause it looks cute." width="162" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+Overwatch
+</strong>
+<br>
+Uploaded by
+Novembyr
+</div>
+</div>
+</a>
+</div>
+
+</td>
+<td>
+<div class='photo_box rel' id='photo_1188446'>
+<a class='photo' href='/photos/1188446-overwatch'>
+<img alt="No HACKS REQUIRED! We&#x27;uu sEE ABOUT THAT! Ol DVA MEKA" data-src="http://i0.kym-cdn.com/photos/images/list/001/188/446/f3e.jpg" height="114" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="No Hacks Required by Byronb" width="162" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+Overwatch
+</strong>
+<br>
+Uploaded by
+Novembyr
+</div>
+</div>
+</a>
+</div>
+
+</td>
+</tr>
+</table>
+</div>
+
+</div>
+<div id='nativo-image-1'></div>
+<div data-allow='true' id='allow-comments'></div>
+<div class='facebook_comments'>
+<h2>Facebook Comments</h2>
+<div class='fb-comments' data-href='http://knowyourmeme.com/photos/1219904-overwatch' data-num-posts='1' data-width='680'></div>
+
+</div>
+<div class='inline-unit-wrapper'> <div class='complex-inline-unit complex-ad' data-name='100x100' data-options='{"containerId":"inline-unit-1","lazyLoad":true}' data-trigger-refresh='both' id='inline-unit-1'></div> </div>
+<section class='section_content rel' data-url='/photos/1219904-overwatch/comments.js' id='comments'>
+<br>
+<h2>
+Comments
+</h2>
+<section id='comments-list'>
+<p class='closed'>There are no comments currently available.</p>
+</section>
+</section>
+<p class='tc'>
+<a href="#comments_form" class="button red large">+ Add a Comment</a>
+</p>
+<div class='hide'>
+<section class='section_form c' id='comments_form'>
+<h3>Add a Comment</h3>
+<form accept-charset="UTF-8" action="http://knowyourmeme.com/photos/1219904-overwatch/comments" data-remote="true" id="comment_form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="qLVEgQCkuOOWQ/PH6W6aB2Laq/ttHOKg2cpqiuXYjXk=" /></div><fieldset>
+<textarea cols="40" id="comment_comment" name="comment[comment]" rows="20">
+</textarea>
+</fieldset>
+<fieldset class='buttons c'>
+<input class="button" data-disable-with="Submitting..." name="commit" type="submit" value="Add Comment" />
+</fieldset>
+</form>
+
+
+</section>
+</div>
+<form accept-charset="UTF-8" action="http://knowyourmeme.com/photos/1219904-overwatch/comments" class="comment-reply-form hide" data-remote="true" id="comment-reply-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="qLVEgQCkuOOWQ/PH6W6aB2Laq/ttHOKg2cpqiuXYjXk=" /></div><fieldset>
+<input class="comment-parent-id" id="comment_parent_id" name="comment[parent_id]" type="hidden" value="0" />
+<textarea cols="40" id="comment_comment" name="comment[comment]" rows="3">
+</textarea>
+</fieldset>
+<fieldset>
+<input class="reply-button" data-disable-with="Submitting..." name="commit" type="submit" value="Reply" />
+</fieldset>
+</form>
+
+
+<br>
+
+<div data-gallery-path='/memes/overwatch/photos/trending' data-initial-path='/photos/gallery.js?id=overwatch' id='spp-gallery'>
+<i class="fa fa-spinner fa-spin fa-2x" style="color: #9f1c27;"></i>
+</div>
+
+
+</div>
+<aside class='right' id='sidebar'>
+<div class='upload-additional-media-button'> <a href="/memes/overwatch/photos/new" class="large red button" rel="nofollow">+ Add an Image</a> </div> <div class='sidebar_box c'> <h2>Image Details</h2> <div class='row'> <p> <span class='view_count'>1,858</span> views <span class='today_view_count' title='0.00%'>(0 from today)</span> </p> </div> <div class='row'> <p>Uploaded <abbr class='timeago' title='2017-02-07T06:14:36-05:00'>Feb 07, 2017 at 06:14AM EST</abbr></p> </div> <div class='row'> <h6> Origin Entry </h6> <p> <a href="/memes/subcultures/overwatch" class="origin-entry-summary" title="Overwatch is a team-based first-person shooter video game developed by Blizzard Entertainment, in which players assume control of a variety of hero characters each with their own unique abilities.">Overwatch</a> </p> </div> <div class='rectangle-unit-wrapper'> <div class='complex-rectangle-unit complex-ad' data-name='300x250,300x600' data-options='{"containerId":"rectangle-unit-1"}' id='rectangle-unit-1'></div> </div> <div class='row'> <h6> Source </h6> <p> <a href="https://myserventsneverdie.tumblr.com/post/156907000730/h-handsome-squidward" rel="nofollow" target="_blank">My Servants Never Die</a> </p> </div> <div class='row'> <h6>Tags</h6> <p id='tag_list'><a href="/search?context=images&amp;q=tags%3A%28%22overwatch%22%29" data-tag="overwatch" rel="nofollow">overwatch</a>, <a href="/search?context=images&amp;q=tags%3A%28%22zenyatta%22%29" data-tag="zenyatta" rel="nofollow">zenyatta</a></p> </div> <div class='row'> <div class='tc'> <a href="/contact?image=http%3A%2F%2Fknowyourmeme.com%2Fphotos%2F1219904-overwatch" class="large red button" data-confirm="To claim or dispute authorship for this image, please provide the name of the original author and the URL of the site where it was originally uploaded." rel="nofollow" target="_blank">Claim Authorship</a> <a href="/photos/1219904-overwatch/edits" class="large red button" rel="nofollow">Edit History</a> </div> </div> <div class='sidebar_box'> <div class='sidebar_box grey c' id='author_info'> <h4>About the Uploader</h4> <section class='editor row c'> <a class='photo left' href='/users/rakashin'> <img alt="Rakashin" data-src="http://i0.kym-cdn.com/profiles/icons/tiny/000/291/438/88a.jpg" height="32" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Rakashin" width="32" /> </a> <div class='name left'> <h6> <a href='/users/rakashin'>Rakashin</a> </h6> <p class='role'> Archivist &amp; Commentator &amp; Media Bus Boy </p> </div> </section> </div> </div> <div class='rectangle-unit-wrapper'> <div class='complex-rectangle-unit complex-ad' data-name='300x250' data-options='{"containerId":"rectangle-unit-2"}' id='rectangle-unit-2'></div> </div> <div class='row'> <h6>Textile Embed</h6> <textarea class='photo_embed' name='html_embed' readonly='readonly' rows='2'>!http://i0.kym-cdn.com/photos/images/original/001/219/904/610.jpg!</textarea> </div> </div> <div class='rectangle-unit-wrapper'> <div class='complex-rectangle-unit complex-ad' data-name='300x250' data-options='{"containerId":"rectangle-unit-3"}' id='rectangle-unit-3'></div> </div> <div id='ora-tv' style='margin-bottom: 15px; min-height: 250px;'> <iframe allowfullscreen='' height='250' mozallowfullscreen='' scrolling='no' src='//www.ora.tv/embed/partner/knowyourmeme/playlist/262/v/1?break_aspect_ratio=true' webkitallowfullscreen='' width='300'></iframe> </div> <div class='sidebar_box c' id='popular_galleries'> <h3> Today's Top Image Galleries </h3> <table> <tr class='row-1'> <td> <a href="/memes/doki-doki-literature-club/photos/trending" rel="nofollow"><img alt="Slpb3mm" class="top-gallery-thumbnail" data-src="http://i0.kym-cdn.com/entries/icons/mobile/000/024/101/slpB3Mm.jpg" height="90" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="144" /></a> <h4> <a href="/memes/doki-doki-literature-club/photos/trending" rel="nofollow">Doki Doki Literature Club</a> </h4> </td> <td> <a href="/memes/original-vs-un-tumblrized/photos/trending" rel="nofollow"><img alt="Screen_shot_2018-01-29_at_10.28.59_am" class="top-gallery-thumbnail" data-src="http://i0.kym-cdn.com/entries/icons/mobile/000/025/277/Screen_Shot_2018-01-29_at_10.28.59_AM.jpg" height="90" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="144" /></a> <h4> <a href="/memes/original-vs-un-tumblrized/photos/trending" rel="nofollow">Original vs. Un-Tumblrized</a> </h4> </td> </tr> <tr class='row-2'> <td> <a href="/memes/dragon-ball/photos/trending" rel="nofollow"><img alt="4stardragonball" class="top-gallery-thumbnail" data-src="http://i0.kym-cdn.com/entries/icons/mobile/000/006/464/4StarDragonball.jpg" height="90" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="144" /></a> <h4> <a href="/memes/dragon-ball/photos/trending" rel="nofollow">Dragon Ball</a> </h4> </td> <td> <a href="/memes/earth-chan/photos/trending" rel="nofollow"><img alt="Earthchan" class="top-gallery-thumbnail" data-src="http://i0.kym-cdn.com/entries/icons/mobile/000/024/899/earthchan.jpg" height="90" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="144" /></a> <h4> <a href="/memes/earth-chan/photos/trending" rel="nofollow">Earth-chan</a> </h4> </td> </tr> </table> </div> <div class='sticky-sidebar'> <div class='rectangle-unit-wrapper'> <div class='complex-rectangle-unit complex-ad' data-name='300x250,300x600' data-options='{"containerId":"rectangle-unit-sticky"}' id='rectangle-unit-sticky'></div> </div> <div class='like_box'> <div class='fb-page fb-page-like-sidebar' data-adapt-container-width='false' data-hide-cover='true' data-href='https://www.facebook.com/knowyourmeme' data-position='like-box' data-show-facepile='false' data-small-header='true' data-width='300'></div> </div> </div>
+</aside>
+</div>
+<script type='text/javascript'> (function() { window.cToolbarInit = function() { cToolbar.load({ mobileRightButton: 'email', snapchatRelUrl: '', facebookUsername: 'knowyourmeme', facebookName: 'Know Your Meme', twitterHandle: 'knowyourmeme', twitterName: 'Know Your Meme', instagramHandle: 'knowyourmeme', instagramName: 'Know Your Meme', youtube: 'knowyourmeme', youtubeDisplayName: 'knowyourmeme', desktopBackground: 'solid', desktopSocialButtons: [], channel: '', mobileVideo: '', videoCollapsed: '' }); }; var ns = document.createElement('script'); ns.type = 'text/javascript'; ns.async = true; ns.src = '//toolbar.complex.com/dist/ctoolbar.min.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ns, s); })(); </script>
+<footer id='footer'> <div class='wrap'> <table id='footer_boxes'> <tr> <td class='footer_box'> <h5>Meme DB</h5> <ul> <li> <a href='/memes'>Memes</a> </li> <li> <a href='/episodes'>Episodes</a> </li> <li> <a href='/forums'>Forums</a> </li> </ul> </td> <td class='footer_box'> <h5>Features</h5> <ul> <li> <a href='/blog'>KYM Blog</a> </li> <li> <a href='/photos'>Images</a> </li> <li> <a href='/videos'>Videos</a> </li> </ul> </td> <td class='footer_box'> <h5>Extras!</h5> <ul> <li> <a href='/blog/rules-and-guidelines/'>Site Rules</a> </li> <li> <a href='/blog/the-style-guide'>Style Guide</a> </li> <li> <a href='/subscribe'>RSS Feeds</a> </li> <li> <a href='/chat' rel='nofollow'>Chat</a> </li> </ul> </td> <td class='footer_box'> <h5>About KYM</h5> <ul> <li> <a href='/about'>About Us</a> </li> <li> <a href='/credits'>Credits</a> </li> <li> <a href='/contact'>Contact</a> </li> <li> <a href='/jobs'>Jobs</a> </li> </ul> </td> <td class='footer_box'> <h5>KYM Is Also On</h5> <ul> <li> <a href='http://facebook.com/knowyourmeme' rel='nofollow' target='_blank'>Facebook</a> </li> <li> <a href='https://pinterest.com/knowyourmeme' rel='nofollow' target='_blank'>Pinterest</a> </li> <li> <a href='http://twitter.com/knowyourmeme' rel='nofollow' target='_blank'>Twitter</a> </li> <li> <a href='http://youtube.com/knowyourmeme' rel='nofollow' target='_blank'>YouTube</a> </li> <li> <a href='http://tumblr.knowyourmeme.com' rel='nofollow' target='_blank'>Tumblr</a> </li> </ul> </td> </tr> </table> </div> </footer> <div id='sub_network_footer_wrapper'> <div id='subnetworkfooter'> <p class='footerlinks'> <a href="http://corp.cheezburger.com/legal/" rel="nofollow" target="_blank">Legal Information</a>: <a href="/">Know Your Meme &reg;</a> is a trademark of <a href="http://literally.media" target="_blank">Literally Media Ltd.</a> By using this site, you are agreeing by the site's <a href="http://corp.cheezburger.com/legal/terms-of-service/" rel="nofollow" target="_blank">terms of use</a> and <a href="http://corp.cheezburger.com/legal/privacy-policy/" rel="nofollow" target="_blank">privacy policy</a> and <a href="http://corp.cheezburger.com/legal/copyright-infringement-notification/" rel="nofollow" target="_blank">DMCA policy</a>. <br> &copy; 2007-2018 <a href="http://literally.media" target="_blank">Literally Media Ltd.</a> </p> </div> </div>
+<div class='hide'> <div id='login_signup_form'> <h3>Yo Yo! You must login or signup first!</h3> <table> <tr> <td class='login'> <h6>Already a memeber?</h6> <p><a href="/login" class="large red button" rel="nofollow">Login Now!</a></p> </td> <td class='signup'> <h6>Don't have an account?</h6> <p><a href="/signup" class="large red button" rel="nofollow">Sign up Now!</a></p> </td> </tr> </table> </div> </div> <div class='hide'> <div id='abm'> <a href="/whitelist-us" id="abm-image-link" rel="nofollow" target="_blank"><img alt="Abm" data-src="http://a.kym-cdn.com/assets/abm-5e4f6f4a89609dcba11dbc32772815cc.png" height="800" id="abm-image" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="800" /> </a><p> <a href="javascript:;" id="abm-close-text" rel="nofollow">No thanks, take me back to the meme zone!</a> </p> </div> </div> <script type='text/javascript'>var _qevents = _qevents || []; (function() { var elem = document.createElement('script'); elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js"; elem.async = true; elem.type = "text/javascript"; var scpt = document.getElementsByTagName('script')[0]; scpt.parentNode.insertBefore(elem, scpt); })(); _qevents.push([{ qacct:"p-75z9nhQwNH4Ek" }, { qacct:"p-149W7Ang9fLCQ" }]);</script> <noscript> <div style='display: none;'> <img alt='Quantcast' border='0' height='1' src='http://pixel.quantserve.com/pixel?a.1=p-75z9nhQwNH4Ek&amp;a.2=p-149W7Ang9fLCQ' style='display: none;' width='1'> </div> </noscript> <script type='text/javascript'>var _comscore = _comscore || []; _comscore.push({ c1: "2", c2: "6685975" }); (function() { var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; el.parentNode.insertBefore(s, el); })();</script> <noscript> <img src='http://b.scorecardresearch.com/p?c1=2&amp;c2=6685975&amp;cv=2.0&amp;cj=1'> </noscript> <div id='chartbeat-sections' data-sections='Image Pages,Editor Content,Not in Newsfeed'></div> <script type='text/javascript'> var _sf_async_config = _sf_async_config || {}; _sf_async_config.uid = 6425; _sf_async_config.domain = 'knowyourmeme.com'; _sf_async_config.useCanonical = true; _sf_async_config.title = document.title.replace(' | Know Your Meme', ''); _sf_async_config.sections = 'Image Pages,Editor Content,Not in Newsfeed'; _sf_async_config.authors = 'Rakashin'; (function() { function loadChartbeat() { var e = document.createElement('script'); e.setAttribute('language', 'javascript'); e.setAttribute('type', 'text/javascript'); e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js'); document.body.appendChild(e); } var oldonload = window.onload; window.onload = (typeof window.onload != 'function') ? loadChartbeat : function() { oldonload(); loadChartbeat(); }; })(); </script> <script src='//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&amp;adInstanceId=65fbfb71-0187-4864-a8c1-a476d6acab1e' type='text/javascript'></script>
+<div class='social-data' data-media='http://i0.kym-cdn.com/photos/images/facebook/001/219/904/610.jpg' data-url='http://knowyourmeme.com/photos/1219904-overwatch'></div>
+</body>
+</html>
